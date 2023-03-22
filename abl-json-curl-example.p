@@ -374,7 +374,7 @@ procedure GetRequest.
 
    empty temp-table images no-error.
    assign
-    lvc_link_images = "https://imagens-links.com/images"
+    lvc_link_images = "https://imagens-links.com/IMAGES-STORE"
     lvi_count_image = 0
     .
  
