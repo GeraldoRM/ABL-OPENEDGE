@@ -122,7 +122,7 @@ repeat:
    end.    
    
    if mkp_hist.mkp_interface <> "PRODUTO-DELETE" then
-      run GetRequest.
+      run GetJsonRequest.
    else do:
       find first ptmkp_mstr no-lock 
            where ptmkp_domain  = global_domain
@@ -305,7 +305,7 @@ delete object json_arr_skus        no-error.
 
 session:numeric-format = lvc_old_session_dt.
 
-procedure GetRequest.
+procedure GetJsonRequest.
 
    define variable json_obj_main       as Progress.Json.ObjectModel.JsonObject.
    define variable json_obj_productData 
@@ -669,5 +669,5 @@ procedure GetRequest.
    delete object json_obj_stockData            no-error.
    delete object json_obj_images               no-error.
    delete object json_obj_skattributes         no-error.
-end. // GetRequest
+end. // GetJsonRequest
 
